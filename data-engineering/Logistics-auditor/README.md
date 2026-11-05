@@ -114,6 +114,8 @@ Please edit this `README.md` file in your forked repository to include the follo
 
 - A 3-5 sentence summary of your findings.
 
+  My analysis reveals that delivery performance drastically influences customer sentiment: orders that arrive late receive a low average review score of 2.53 out of 5, compared to 4.29 for those delivered on time. Geographically, main e-commerce hubs like São Paulo and Minas Gerais enjoy extremely low delay rates (approx. 5%), whereas remote Northeast regions like Alagoas suffer from high delay rates of over 23%. Finally, analyzing the overall rating distribution shows that 59.2% of customers are highly satisfied 5-star 'promoters', but a significant 12.8% are frustrated 'detractors' (1 and 2 stars) who present a high risk of churn and brand damage.
+
 ### B. Project Links
 
 - **Link to Notebook:** (e.g., Google Colab, etc.). _Ensure sharing permissions are set to "Anyone with the link can view"._
