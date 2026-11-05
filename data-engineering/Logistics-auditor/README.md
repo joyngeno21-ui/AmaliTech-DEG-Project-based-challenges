@@ -123,7 +123,20 @@ Please edit this `README.md` file in your forked repository to include the follo
 ### C. Technical Explanation
 
 - Briefly explain how you handled the "Data Cleaning".
+  To build a highly reliable analytics foundation, I performed the following cleanups:
+•	Merged Key Entities: Combined the raw orders, customers, and reviews datasets to create a single coherent record per order.
+•	Removed Extreme Sparsity: Dropped highly sparse text columns (review_comment_title and review_comment_message) that had over 60% and 88% missing values, respectively, to maintain dataframe compactness.
+•	Handled Missing Records: Removed rows with missing timestamps and missing review scores (such as orders that were never delivered, canceled, or remained unapproved), bringing our dataset down from 99,992 to a perfectly complete set of 96,344 records.
+•	Addressed Translation and Encodings: Corrected Portuguese category names to English by merging product_category_name_translation.csv using the robust latin-1 encoding to safely handle special character decodings.
+
 - Explain your "Candidate's Choice" addition.
+For our custom addition, we built a Distribution of Customer Review Scores (1 to 5 Stars) with both absolute counts and relative percentages.
+Why This Feature Matters to the Business:
+•	Identifies Brand Promoters vs. Detractors: Rather than relying purely on an average score, this distribution shows that 59.2% of customers are highly satisfied promoters (5-star ratings), while 12.8% are disappointed detractors (1 and 2 stars).
+•	Flags Retention Opportunities: Active passives (3-star ratings) account for 8.3% of users. Knowing this allows customer success teams to run specialized win-back email or voucher campaigns to prevent these users from shifting to competitors.
+•	Improves Lifetime Value (LTV): Proactively addressing the detractor group reduces churn, directly saving the business money, as acquiring new users is far costlier than retaining existing ones.
+
+  
 
 **Important Note on Code Submission:**
 
